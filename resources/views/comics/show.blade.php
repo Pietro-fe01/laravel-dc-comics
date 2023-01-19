@@ -11,19 +11,24 @@
             <img src="{{ $comic->thumb }}" alt="">
         </div>    
         <div>
+            <strong>Price:</strong>
             {{ $comic->price }} 
         </div>    
         <div>
+            <strong>Series:</strong>
             {{ $comic->series }} 
         </div>    
         <div>
+            <strong>Sale date:</strong>
             {{ $comic->sale_date }} 
         </div>    
         <div>
+            <strong>Type:</strong>
             {{ $comic->type }}
         </div>
         <div>
-        {{ $comic->description }} 
+            <strong>Description:</strong>
+            {{ $comic->description }} 
         </div>
         <div>
             <a href="{{ route('comics.index') }}">Torna alla pagina principale</a>
