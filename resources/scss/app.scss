@@ -1,1 +1,7 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.table-row td{
+    &:nth-child(3){
+        word-break: break-all;
+    }
+}
