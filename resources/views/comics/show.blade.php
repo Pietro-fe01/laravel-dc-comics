@@ -12,7 +12,7 @@
         </div>    
         <div>
             <strong>Price:</strong>
-            {{ $comic->price }} 
+            ${{ $comic->price }}
         </div>    
         <div>
             <strong>Series:</strong>

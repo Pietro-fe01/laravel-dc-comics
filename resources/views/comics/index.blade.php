@@ -35,7 +35,7 @@
                         <th scope="row">{{ $comic->id }}</th>
                         <td>{{ $comic->title }}</td>
                         <td class="w-25">{{ $comic->thumb }}</td>
-                        <td>{{ $comic->price }}</td>
+                        <td>${{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
