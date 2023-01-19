@@ -4,13 +4,16 @@
     Homepage
 @endsection
 
+<header class="container d-flex align-items-center">
+    <h1 class="me-4">Lista Comics</h1>
+
+    <a href="{{ route('comics.create') }}" class="btn btn-success my-4">
+        Aggiungi un nuovo Comic
+    </a>
+</header>
+
 @section('main-content')
     <section class="container">
-        <h1>Lista Comics</h1>
-
-        <a href="{{ route('comics.create') }}" class="btn btn-success my-4">
-            Aggiungi un nuovo Comic
-        </a>
 
         <table class="table">
             <thead>
