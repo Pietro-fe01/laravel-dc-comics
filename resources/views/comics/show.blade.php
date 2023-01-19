@@ -1,7 +1,7 @@
 @extends('layouts.scheme');
 
 @section('page-title')
-    Comic
+    Show
 @endsection
 
 @section('main-content')

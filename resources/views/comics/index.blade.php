@@ -8,6 +8,10 @@
     <section class="container">
         <h1>Lista Comics</h1>
 
+        <a href="{{ route('comics.create') }}" class="btn btn-success my-4">
+            Aggiungi un nuovo Comic
+        </a>
+
         <table class="table">
             <thead>
                 <tr>
@@ -34,10 +38,8 @@
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->description }}</td>
                         <td>
-                            <a href="{{ route('comics.show', $comic->id) }}">
-                                <button class="btn btn-primary">
-                                    Vedi
-                                </button>
+                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">
+                                Vedi
                             </a>
                         </td>
                     </tr>
