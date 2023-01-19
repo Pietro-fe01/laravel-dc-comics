@@ -33,7 +33,13 @@
                         <td>{{ $comic->sale_date }}</td>
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->description }}</td>
-                        <td>...</td>
+                        <td>
+                            <a href="{{ route('comics.show', $comic->id) }}">
+                                <button class="btn btn-primary">
+                                    Vedi
+                                </button>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
