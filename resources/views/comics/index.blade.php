@@ -41,8 +41,11 @@
                         <td>{{ $comic->type }}</td>
                         <td>{{ $comic->description }}</td>
                         <td>
-                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary">
+                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary mb-2">
                                 Vedi
+                            </a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning text-white mb-2">
+                                Edit
                             </a>
                         </td>
                     </tr>
