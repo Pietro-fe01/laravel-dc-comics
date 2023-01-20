@@ -47,6 +47,12 @@
                             <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning text-white mb-2">
                                 Edit
                             </a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
