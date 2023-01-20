@@ -9,5 +9,5 @@ class Comic extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded = []; // to make all attributes mass assignable
 }
