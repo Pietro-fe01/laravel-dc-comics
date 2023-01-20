@@ -45,7 +45,7 @@
             <button type="submit" class="btn btn-primary">SALVA</button>
             <button type="reset" class="btn btn-secondary">RESET</button>
             <a href="{{ route('comics.index') }}">
-                <button  type="button" class="btn btn-danger">ANNULLA CREAZIONE COMIC</button>
+                <button  type="button" class="btn btn-danger">ANNULLA EDIT COMIC</button>
             </a>
         </form>
     </section>
