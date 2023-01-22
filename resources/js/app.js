@@ -5,15 +5,15 @@ import.meta.glob([
     '../img/**'
 ]);
 
-const deletingButton = document.querySelectorAll('.button-delete');
-const deletingForm = document.querySelectorAll('.form-delete');
+const modalDeleteBtn = document.querySelectorAll('.modal-delete-btn');
+const modalForm = document.querySelector('.modal-form');
+const whichComic = document.getElementById('which-one');
 
-deletingButton.forEach((elm, index) => {
+modalDeleteBtn.forEach(elm => { 
     elm.addEventListener('click', function(){
-        let res = confirm('By deleting you will not be able to retrieve it anymore. Are you sure?');
-        
-        if ( res === true ) {
-            return deletingForm[index].submit();
-        }
+        modalForm.action = "";
+        const id = elm.getAttribute('data-id');
+        modalForm.action += `/${id}`;
+        whichComic.innerHTML = `record with id number ${id}.`;
     })
 });

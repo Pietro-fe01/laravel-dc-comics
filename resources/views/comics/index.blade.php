@@ -47,15 +47,37 @@
                             <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning text-white mb-2">
                                 Edit
                             </a>
-                            <button class="btn btn-danger button-delete">Delete</button>
-                            <form class="form-delete" action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                            </form>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger modal-delete-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="{{$comic->id}}">
+                                Delete
+                            </button>
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Deleting <span id="which-one">{{ null }}</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    Are you sure?
+                </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <form class="modal-form" action="{{ null }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
