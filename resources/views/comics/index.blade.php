@@ -33,8 +33,14 @@
                 @foreach ($comics as $comic)
                     <tr class="table-row">
                         <th scope="row">{{ $comic->id }}</th>
-                        <td>{{ $comic->title }}</td>
-                        <td class="w-25">{{ $comic->thumb }}</td>
+                        <td>
+                            @if ($comic->thumb)
+                            <img src="{{ $comic->thumb }}" alt="thumb-comic.img">
+                            @else
+                            <img src="https://via.placeholder.com/192x221" alt="">
+                            @endif
+                        </td>
+                        <td style="word-break:normal">{{ $comic->title }}</td>
                         <td>${{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>{{ $comic->sale_date }}</td>

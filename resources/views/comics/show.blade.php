@@ -8,7 +8,7 @@
     <section class="container">
         <h1>{{ $comic->title }}</h1>
         <div>
-            <img src="{{ $comic->thumb }}" alt="">
+            <img src="{{ $comic->thumb }}" alt="thumb-comic.img">
         </div>    
         <div>
             <strong>Price:</strong>
