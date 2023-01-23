@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Comic;
 use Illuminate\Http\Request;
+require_once __DIR__ . '/../../../functions/data-validation.php';
 
 class ComicController extends Controller
 {
@@ -38,15 +39,8 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:100',
-            'thumb' => 'nullable|string',
-            'price' => 'required|numeric|between:0,9999.99',
-            'series' => 'required|string|max:50',
-            'sale_date' => 'required|date',
-            'type' => 'required|string|max:40',
-            'description' => 'nullable|string'
-        ]);
+        getDataValidation($request);
+
         // Prendo i dati inseriti dal Form
         $data = $request->all();
 
@@ -94,15 +88,8 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $request->validate([
-            'title' => 'required|string|max:100',
-            'thumb' => 'nullable|string',
-            'price' => 'required|numeric|between:0,9999.99',
-            'series' => 'required|string|max:50',
-            'sale_date' => 'required|date',
-            'type' => 'required|string|max:40',
-            'description' => 'nullable|string'
-        ]);
+        getDataValidation($request);
+
         $data =  $request->all();
         $comic->update($data);
 
