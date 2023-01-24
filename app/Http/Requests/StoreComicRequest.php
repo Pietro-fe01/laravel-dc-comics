@@ -33,4 +33,17 @@ class StoreComicRequest extends FormRequest
             'description' => 'nullable|string'
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'title.required' => 'ATTENZIONE: il titolo è obbligatorio',
+            'price.required' => 'ATTENZIONE: il prezzo è obbligatorio'
+        ];
+    }
 }
