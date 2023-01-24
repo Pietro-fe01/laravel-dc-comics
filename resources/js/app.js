@@ -12,7 +12,7 @@ const whichComic = document.getElementById('which-one');
 modalDeleteBtn.forEach(elm => { 
     elm.addEventListener('click', function(){
         modalForm.action = "";
-        const id = elm.getAttribute('data-id');
+        const id = this.getAttribute('data-id');
         modalForm.action += `/${id}`;
         whichComic.innerHTML = `record with id number ${id}.`;
     })
