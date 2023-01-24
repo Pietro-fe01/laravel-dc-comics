@@ -15,7 +15,7 @@
 @section('main-content')
     <section class="container">
 
-        <table class="table">
+        <table class="table table-hover align-middle table-striped table-bordered table-dark">
             <thead>
                 <tr>
                     <th scope="col">#</th>
